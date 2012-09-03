@@ -12,8 +12,10 @@ class ResponsiveSlideshow extends DataExtension {
 		$config->addComponent(new GridFieldEditButton());
 		$config->addComponent(new GridFieldDeleteAction());
 		$config->addComponent(new GridFieldDetailForm());
+		$config->addComponent(new GridFieldSortableRows('SortOrder'));
 
-		$gridField = new GridField('ResponsiveSlides', _t('Project.TEASERIMAGE', 'Project Image'), $this->owner->ResponsiveSlides(), $config);
+
+		$gridField = new GridField('ResponsiveSlides', _t('Project.PROMOTIONS', 'Promotions'), $this->owner->ResponsiveSlides(), $config);
 
 		$gridField->getConfig()->getComponentByType('GridFieldDataColumns')->setFieldFormatting(array('Image' => function($val, $obj) {
 				if ($obj->hasMethod('Image')) {
@@ -33,5 +35,19 @@ class ResponsiveSlideshow extends DataExtension {
 	}
 	public static function remove_from($className) {
 		Object::remove_extension($className, $this->owner->class);
+	}
+	
+}
+
+class ResponsiveSlideshow_Controller extends SiteTreeExtension { 
+
+	public function contentcontrollerInit($controller) {
+		if ($this->owner->ResponsiveSlides()) {
+			Requirements::javascript("mysite/javascript/thirdparty/jquery.js");
+			Requirements::javascript("Slideshow/thirdparty/responsiveSlides/responsiveslides.min.js");
+			Requirements::javascript("Slideshow/js/core.js");
+			Requirements::css("Slideshow/thirdparty/responsiveSlides/demo/themes/themes.css");
+		}
+		
 	}
 }

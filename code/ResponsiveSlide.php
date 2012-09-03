@@ -3,10 +3,10 @@
 class ResponsiveSlide extends DataObject {
 	public static $db = array(
 		'Title' => 'Varchar',
-		'Content' => 'HTMLText',
+		"SortOrder" => "Int",
 	);
 	public static $has_one = array(
 		'Image' => 'Image',
-		'Parent' => 'SiteTree',
+		'RelatedTo' => 'DOArticle',
 	);
 }
