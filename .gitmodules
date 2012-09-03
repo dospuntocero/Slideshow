@@ -1,0 +1,3 @@
+[submodule "thirdparty/responsiveSlides"]
+	path = thirdparty/responsiveSlides
+	url = git://github.com/viljamis/ResponsiveSlides.js.git
