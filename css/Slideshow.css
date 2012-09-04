@@ -1,0 +1,150 @@
+.cf {
+  *zoom: 1;
+}
+.cf:before,
+.cf:after {
+  display: table;
+  content: "";
+}
+.cf:after {
+  clear: both;
+}
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -ms-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+.text_replacement {
+  text-indent: -999em;
+  overflow: hidden;
+}
+.box {
+  margin: 10px;
+  padding: 10px;
+  background: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -ie-border-radius: 5px;
+}
+.cf {
+  display: inline-block;
+  display: block;
+}
+.cf:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+.text_replacement {
+  text-indent: -999pc;
+}
+/*positioning*/
+.abs {
+  position: absolute;
+}
+.rel {
+  position: relative;
+}
+/*redondeamientos*/
+#slideshow {
+  *zoom: 1;
+  display: inline-block;
+  display: block;
+  position: relative;
+  height: 450px;
+  padding-bottom: 45px;
+  width: 930px;
+  margin: 10px auto;
+}
+#slideshow:before,
+#slideshow:after {
+  display: table;
+  content: "";
+}
+#slideshow:after {
+  clear: both;
+}
+#slideshow:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+#slideshow ul {
+  margin: 0;
+  padding: 0;
+}
+#slideshow ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#slideshow ul li .caption {
+  padding: 0 200px 0 10px;
+  width: 720px;
+  background: url(../images/slideshow_violator.png) left top;
+  display: block;
+  height: 45px;
+  color: #fff;
+  position: absolute;
+  z-index: 5000;
+  bottom: -35px;
+  font-size: 12px;
+}
+#slideshow ul li a {
+  display: block;
+  height: 430px;
+}
+#slideshow .prev,
+#slideshow .next {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  margin-top: -60px;
+  top: 50%;
+  z-index: 40;
+  cursor: pointer;
+}
+#slideshow .prev {
+  left: -5px;
+  background: url('../images/themes.gif') no-repeat;
+}
+#slideshow .next {
+  right: -5px;
+  background: url('../images/themes.gif') no-repeat -35px 0;
+}
+#slideshow .pager {
+  position: absolute;
+  right: 18px;
+  bottom: 35px;
+  z-index: 50;
+}
+#slideshow .pager a {
+  text-indent: -9999px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  float: left;
+  margin-left: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  background: transparent url(../images/slide_navigation_noactive.png) no-repeat 0 0;
+}
+#slideshow .pager a:hover {
+  background: transparent url(../images/slide_navigation_hover.png) no-repeat 0 0;
+}
+#slideshow .pager a.activeSlide {
+  background: transparent url(../images/slide_navigation_hover.png) no-repeat 0 0;
+}

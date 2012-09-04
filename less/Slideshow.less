@@ -1,0 +1,82 @@
+@import "../../mysite/less/mixins.less";
+
+#slideshow {
+	.cf;
+	position: relative;
+	height: 450px;
+	padding-bottom: 45px;
+	width: 930px;
+	margin: 10px auto;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		
+		li{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			
+			.caption {
+				padding: 0 200px 0 10px;
+				width: 720px;
+				background: url(../images/slideshow_violator.png) left top;
+				display: block;
+				height: 45px;	
+				color: #fff;
+				position: absolute;
+				z-index: 5000;
+				bottom: -35px;
+				font-size: 12px;
+			}
+			
+			a {
+				display: block;
+				height: 430px;
+			}
+		}
+	}
+
+	.prev,.next{
+		position: absolute;
+		width: 40px;
+		height:60px;
+		margin-top: -60px;
+		top:50%;
+		z-index: 40;
+		cursor:pointer;
+	}
+	.prev{
+		left:-5px;
+		background:  url('../images/themes.gif') no-repeat;
+	}
+	.next{
+		right:-5px;
+		background:  url('../images/themes.gif') no-repeat -35px 0;
+		
+	}
+
+	.pager {
+		position: absolute;
+		right: 18px;
+		bottom: 35px;
+		z-index: 50;
+		a {
+			text-indent: -9999px;
+			display: block;
+			width: 12px;
+			height: 12px;
+			float: left;
+			margin-left: 5px;
+			cursor: pointer;
+			overflow: hidden;
+			background: transparent url(../images/slide_navigation_noactive.png) no-repeat 0 0;
+		}
+		a:hover {
+			background: transparent url(../images/slide_navigation_hover.png) no-repeat 0 0;
+		}		
+		a.activeSlide {
+			background: transparent url(../images/slide_navigation_hover.png) no-repeat 0 0;
+		}
+	}
+}
