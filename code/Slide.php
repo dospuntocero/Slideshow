@@ -48,6 +48,9 @@ class Slide extends DataObject {
 			$fields->push(new LiteralField('SaveFirst',_t('Slide.YOUNEEDTOSAVEFIRST',"You will be able to add the image once you save for the first time")));
 		}
 		
+		//allow extending this object with another 
+		$this->extend('updateCMSFields', $fields);
+		
 		return $fields;
 	}
 }
