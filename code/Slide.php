@@ -41,6 +41,8 @@ class Slide extends DataObject {
 			$UploadField = new UploadField('Image', _t('Slide.MainImage',"Image"));
 			$UploadField->getValidator()->setAllowedExtensions(array('jpg', 'jpeg', 'png', 'gif'));
 			$UploadField->setConfig('allowedMaxFileNumber', 1);
+			$UploadField->setFolderName("Slides");
+			
 			$fields->push($UploadField);
 		} else {
 			$fields->push(new LiteralField('SaveFirst',_t('Slide.YOUNEEDTOSAVEFIRST',"You will be able to add the image once you save for the first time")));
