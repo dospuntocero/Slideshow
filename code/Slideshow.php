@@ -26,7 +26,7 @@ class Slideshow_Controller extends SiteTreeExtension {
 
 	public function contentcontrollerInit($controller) {
 		if ($this->owner->Slides()) {
-			Requirements::javascript(THIRDPARTY_DIR."/jquery/jquery.js");
+			Requirements::javascript(THIRDPARTY_DIR."/jquery/jquery.min.js");
 			Requirements::javascript("Slideshow/thirdparty/jquery.cycle.js");
 			Requirements::javascript("Slideshow/js/core.js");
 			Requirements::css("Slideshow/css/Slideshow.css");
