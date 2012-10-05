@@ -1,0 +1,12 @@
+es:
+  Slide:
+    GOTOURL: 'URL para redirigir al usuario cuando hace click en una de las diapositivas'
+    MainImage: Imágen
+    NOTHUMBNAILSAVAILABLE: 'No hay miniaturas disponibles'
+    PLURALNAME: Diapositivas
+    SINGULARNAME: Diapositiva
+    TITLE: Título
+    YOUNEEDTOSAVEFIRST: 'Necesitas guardar el objeto primero, luego podrás agregar la imagen'
+  Slideshow:
+    PROMOTIONS: Promociones
+    SLIDESHOWTAB: Promociones

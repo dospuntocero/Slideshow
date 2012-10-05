@@ -1,0 +1,12 @@
+en:
+  Slide:
+    GOTOURL: 'url to redirect the user when clicks on the slide'
+    MainImage: Image
+    NOTHUMBNAILSAVAILABLE: 'No thumbnails available'
+    PLURALNAME: Slids
+    SINGULARNAME: Slide
+    TITLE: Title
+    YOUNEEDTOSAVEFIRST: 'You will be able to add the image once you save for the first time'
+  Slideshow:
+    PROMOTIONS: Promotions
+    SLIDESHOWTAB: Slideshow
