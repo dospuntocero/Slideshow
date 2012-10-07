@@ -10,6 +10,8 @@ class Slide extends DataObject {
 		'Image' => 'Image',
 		"Page" => "Page"
 	);
+
+	static $default_sort = 'SortOrder';	
 	
 	static $summary_fields = array(
 		'Thumbnail' => 'Thumbnail',
