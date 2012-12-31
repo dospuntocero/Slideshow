@@ -5,6 +5,7 @@ class Slide extends DataObject {
 		'Title' => 'Varchar',
 		"SortOrder" => "Int",
 		"GoToURL" => "Text",
+		"Archived" => "Boolean",
 	);
 	public static $has_one = array(
 		'Image' => 'Image',
@@ -20,11 +21,18 @@ class Slide extends DataObject {
 	
 	function getThumbnail() {
 		if (((int) $this->ImageID > 0) && (is_a($this->Image(),'Image')))  {
-			return $this->Image()->CMSThumbnail();
+	   return $this->Image()->SetWidth(50); 
 		} else {
 			return _t('Slide.NOTHUMBNAILSAVAILABLE',"No thumbnails available") ;
 		}
 	}
+	
+	function ArchivedReadable(){
+		if($this->Archived == 1) return _t('GridField.Archived', 'Archived');
+		return _t('GridField.Live', 'Live');
+	}
+	
+	
 	
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
@@ -37,6 +45,15 @@ class Slide extends DataObject {
 		//replace existing fields with own versions
 		$fields->replaceField('Title', new TextField('Title',_t('Slide.TITLE',"Title")));
 		$fields->replaceField('GoToURL', new TextField('GoToURL',_t('Slide.GOTOURL',"url to redirect the user when clicks on the slide")));
+		
+		$fields->addFieldToTab('Root.Main', $group = new CompositeField(
+			$label = new LabelField("LabelArchive","Archive this carousel item?"),
+			new CheckboxField('Archived', '')
+		));
+  	$group->addExtraClass("field special");
+  	$label->addExtraClass("left");
+		
+		
 		
 		//adding upload field - if slide has already been saved
 		if ($this->ID) {
