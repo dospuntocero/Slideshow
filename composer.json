@@ -2,7 +2,7 @@
     "name": "silverstripe/slideshow",
     "description": "Slideshow module for ss3 based on jQuery Cycle plugin.",
     "type": "silverstripe-module",
-    "keywords": ["silverstripe", "responsive", "images", "@2x"],
+    "keywords": ["silverstripe", "slideshow","showcase", "main gallery","images"],
     "license": "BSD-3-Clause",
     "authors": [
     {
@@ -14,7 +14,7 @@
     {
         "silverstripe/framework": "3.*",
         "silverstripe/cms": "3.*",
-				"undefinedoffset/sortablegridfield": "dev-master"
+        "undefinedoffset/sortablegridfield": "dev-master"
     },
     "version": "1.0.0"    
 }
