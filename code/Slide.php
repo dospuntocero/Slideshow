@@ -12,11 +12,15 @@ class Slide extends DataObject {
 		"Page" => "Page"
 	);
 
-	static $default_sort = 'SortOrder';	
+	static $default_sort = 'SortOrder';
+	
+	static $field_labels = array(
+		'Title' => 'Alternate text'	
+	);
 	
 	static $summary_fields = array(
-		'Thumbnail' => 'Thumbnail',
-		'Title' => 'Alternate text'
+		'Thumbnail',
+		'Title'
 	);
 	
 	function getThumbnail() {
