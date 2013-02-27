@@ -1,5 +1,5 @@
 {
-    "name": "silverstripe/slideshow",
+    "name": "dospuntocero/slideshow",
     "description": "Slideshow module for ss3 based on jQuery Cycle plugin.",
     "type": "silverstripe-module",
     "keywords": ["silverstripe", "slideshow","showcase", "main gallery","images"],
@@ -10,6 +10,7 @@
         "email": "fa@dospuntocero.cl"
     }
     ],
+    "replace": {"silverstripe/slideshow": "*"},
     "require":
     {
         "silverstripe/framework": "3.*",
