@@ -55,22 +55,13 @@ class Slide extends DataObject {
 			$label = new LabelField("LabelArchive","Archive this carousel item?"),
 			new CheckboxField('Archived', '')
 		));
-  	$group->addExtraClass("field special");
-  	$label->addExtraClass("left");
 		
-		
-		
-		//adding upload field - if slide has already been saved
-		if ($this->ID) {
-			$UploadField = new UploadField('Image', _t('Slide.MainImage',"Image"));
-			$UploadField->getValidator()->setAllowedExtensions(array('jpg', 'jpeg', 'png', 'gif'));
-			$UploadField->setConfig('allowedMaxFileNumber', 1);
-			$UploadField->setFolderName("Slides");
-			
-			$fields->push($UploadField);
-		} else {
-			$fields->push(new LiteralField('SaveFirst',_t('Slide.YOUNEEDTOSAVEFIRST',"You will be able to add the image once you save for the first time")));
-		}
+		$UploadField = new UploadField('Image', _t('Slide.MainImage',"Image"));
+		$UploadField->getValidator()->setAllowedExtensions(array('jpg', 'jpeg', 'png', 'gif'));
+		$UploadField->setConfig('allowedMaxFileNumber', 1);
+		$UploadField->setFolderName("Slides");
+	
+		$fields->push($UploadField);
 		
 		//allow extending this object with another 
 		$this->extend('updateCMSFields', $fields);
