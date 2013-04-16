@@ -45,6 +45,7 @@ class Slide extends DataObject {
 		$fields->removeByName('Image'); //this is added manually later
 		$fields->removeByName('SortOrder');
 		$fields->removeByName('PageID');
+		$fields->removeByName('Archived');
 		
 		//replace existing fields with own versions
 		$fields->replaceField('Title', new TextField('Title',_t('Slide.TITLE',"Title")));
